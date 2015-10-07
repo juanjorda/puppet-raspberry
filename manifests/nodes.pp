@@ -1,3 +1,7 @@
+class base {
+  include sudo, ssh
+}
+
 node 'media-server' {
-  include sudo
+  include base, avahi
 }

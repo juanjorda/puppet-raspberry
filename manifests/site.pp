@@ -1,2 +1,2 @@
 import 'nodes.pp'
-$puppetserver = 'linux-server.juanter'
+$puppetserver = 'linux-server.local'
