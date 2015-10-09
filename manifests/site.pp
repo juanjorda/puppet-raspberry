@@ -1,2 +1,2 @@
 import 'nodes.pp'
-$puppetserver = 'linux-server.local'
+$puppetserver = 'puppetmaster.local'
