@@ -11,12 +11,6 @@ class users::config {
     mode    => 644,
   }
 
-  file_line { "Include sudoers.d":
-    ensure  => "present",
-    path    => "/etc/sudoers",
-    line    => "includedir /etc/sudoers.d\n",
-  }
-
   file_line { "Delete pi from sudoers":
     ensure  => "absent",
     path    => "/etc/sudoers",
