@@ -11,13 +11,14 @@ class users::config {
     mode    => 644,
   }
 
-  line { "/etc/sudoers":
+  file_line { "sudoers":
     ensure  => "present",
-    content => "includedir /etc/sudoers.d\n",
+    path    => "/etc/sudoers",
+    line    => "includedir /etc/sudoers.d\n",
   }
 
-  line { "/etc/sudoers":
+  file_line { "sudoers":
     ensure  => "absent",
-    content => "pi ALL=(ALL) NOPASSWD: ALL\n",
+    line => "pi ALL=(ALL) NOPASSWD: ALL\n",
   }
 }
