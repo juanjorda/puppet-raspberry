@@ -20,6 +20,6 @@ class users::config {
   file_line { "Delete pi from sudoers":
     ensure  => "absent",
     path    => "/etc/sudoers",
-    line => "pi ALL=(ALL) NOPASSWD: ALL\n",
+    line => "pi ALL=(ALL) NOPASSWD: ALL",
   }
 }
