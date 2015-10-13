@@ -6,5 +6,6 @@ class users::create {
 		home    => '/home/juanter',
 		shell   => '/bin/bash',
 		uid     => '200',
+    managehome => true,
 	}
 }
