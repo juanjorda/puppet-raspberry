@@ -6,10 +6,12 @@ node default {
 	include base
 }
 
-node 'puppetmaster' {
+node 'puppetmaster.local' {
+  notify{"Configuring puppetmaster": }
 	include base
 }
 
-node 'media-server' {
+node 'media-server.local' {
+  notify{"Configuring media-server": }
   include base, avahi
 }
