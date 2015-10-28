@@ -1,3 +1,5 @@
-class sudo {
-  include sudo::install, sudo::config, users::delete
+class sudo::install {
+    package { sudo:
+         ensure => present,
+    }
 }

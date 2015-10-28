@@ -1,5 +1,3 @@
-class sudo::install {
-    package { sudo:
-         ensure => present,
-    }
+class sudo {
+  include sudo::install, sudo::config
 }
