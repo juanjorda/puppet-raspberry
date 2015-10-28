@@ -1,5 +1,5 @@
 class transmission::config {
-  file { "/etc/transmission-daemon/settings.json" :
+  file { "/var/lib/transmission-daemon/info/settings.json" :
     ensure => present,
     owner => 'debian-transmission',
     group => 'debian-transmission',
