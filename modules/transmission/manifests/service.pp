@@ -6,4 +6,5 @@ class transmission::service {
     enable => true,
     require => Class["transmission::config"],
   }
+
 }
