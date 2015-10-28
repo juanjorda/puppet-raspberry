@@ -1,3 +1,5 @@
+# TODO:(1) This should be parameterized as an array of users. Maybe in a JSON file? @refactor 
+
 class users::config {
   ssh_authorized_key { 'juanter':
   	user => 'juanter',
@@ -15,5 +17,12 @@ class users::config {
     ensure  => "absent",
     path    => "/etc/sudoers",
     line => "pi ALL=(ALL) NOPASSWD: ALL",
+  }
+
+# TEST:(5) Test that the alias is in bashrc and works
+  file_line { "Add aliases to bashrc":
+    ensure  => "present",
+    path    => "/home/juanter/.bashrc",
+    line => "set -o vi",
   }
 }
