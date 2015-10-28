@@ -5,7 +5,7 @@ class transmission::config {
     group => 'debian-transmission',
     mode => 0400,
     source => "puppet:///modules/transmission/etc/transmission-daemon/settings.json",
-    require => Class["transmission::install"],
-    notify => Class["transmission::service"],
+    require => Class["transmission::install"]
+    # notify => Class["transmission::service"],
   }
 }
