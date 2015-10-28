@@ -6,7 +6,6 @@ class transmission::config {
     mode => 0400,
     source => "puppet:///modules/transmission/etc/transmission-daemon/settings.json",
     require => Class["transmission::install"],
-    # IMHERE: im working here
-    notify => Class["ssh::service"],
+    notify => Class["transmission::service"],
   }
 }
