@@ -1,11 +1,18 @@
 class hiera::config {
-  file { "/etc/puppet/environments/%{environment}/hieradata/common.yaml":
+  file { "/etc/puppet/environments/$environment/hieradata/common.yaml":
     ensure => present,
     owner => 'root',
     group => 'root',
     mode => 0600,
-    source => "puppet:///modules/hiera/etc/puppet/environments/%{environment}/hieradata/common.yaml",
+    source => "puppet:///modules/hiera/etc/puppet/environments/$environments/hieradata/common.yaml",
     require => File["/etc/puppet/hiera.yaml"]
+  }
+
+  file { "/etc/puppet/environments/$environment/hieradata":
+    ensure => directory,
+    owner => 'root',
+    group => 'root',
+    mode => 0600
   }
 
   file { "/etc/puppet/hiera.yaml":
