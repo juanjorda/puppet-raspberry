@@ -1,5 +1,5 @@
 class base {
-  include sudo, ssh, users
+  include hiera, sudo, ssh, users
 }
 
 node default {
