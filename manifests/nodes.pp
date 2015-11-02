@@ -1,5 +1,5 @@
 class base {
-  include hiera, sudo, ssh, users
+  include sudo, ssh, users
 }
 
 node default {
@@ -9,7 +9,7 @@ node default {
 # TODO(5): Investigate if possible to build this using nodes.json file from vagrant
 node 'puppetmaster.local' {
   notify{"Configuring puppetmaster": }
-	include base
+	include base, hiera
 }
 
 node 'media-server.local' {

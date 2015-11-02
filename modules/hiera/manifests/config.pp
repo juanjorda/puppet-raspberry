@@ -4,7 +4,7 @@ class hiera::config {
     owner => 'root',
     group => 'root',
     mode => 0600,
-    source => "puppet:///modules/hiera/etc/puppet/environments/$environments/hieradata/common.yaml",
+    source => "puppet:///modules/hiera/etc/puppet/environments/$environment/hieradata/common.yaml",
     require => File["/etc/puppet/hiera.yaml"]
   }
 
