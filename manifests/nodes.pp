@@ -8,7 +8,8 @@ node default {
 
 # TODO(5): Investigate if possible to build this using nodes.json file from vagrant
 node 'puppetmaster.local' {
-  notify{"Configuring puppetmaster": }
+  $test = hiera('mykey')
+  notify{"Configuring puppetmaster $test": }
 	include base, hiera
 }
 

@@ -5,7 +5,10 @@ class hiera::config {
     group => 'root',
     mode => 0777,
     source => "puppet:///modules/hiera/etc/puppet/environments/$environment/hieradata/nodes/puppetmaster.local",
-    require => File["/etc/puppet/hiera.yaml"],File["/etc/puppet/environments/$environment/hieradata"] 
+    require => [
+      File["/etc/puppet/hiera.yaml"],
+      File["/etc/puppet/environments/$environment/hieradata"]
+    ]
   }
 
   file { "/etc/puppet/environments/$environment/hieradata/nodes/media-server.local":
@@ -14,7 +17,10 @@ class hiera::config {
     group => 'root',
     mode => 0777,
     source => "puppet:///modules/hiera/etc/puppet/environments/$environment/hieradata/nodes/media-server.local",
-    require => File["/etc/puppet/hiera.yaml"],File["/etc/puppet/environments/$environment/hieradata"] 
+    require => [
+      File["/etc/puppet/hiera.yaml"],
+      File["/etc/puppet/environments/$environment/hieradata"]
+    ]
   }
 
   file { "/etc/puppet/environments/$environment/hieradata/common.yaml":
@@ -23,7 +29,10 @@ class hiera::config {
     group => 'root',
     mode => 0777,
     source => "puppet:///modules/hiera/etc/puppet/environments/$environment/hieradata/common.yaml",
-    require => File["/etc/puppet/hiera.yaml"],File["/etc/puppet/environments/$environment/hieradata"] 
+    require => [
+      File["/etc/puppet/hiera.yaml"],
+      File["/etc/puppet/environments/$environment/hieradata"] 
+    ]
   }
 
   file { "/etc/puppet/environments/$environment/hieradata":
