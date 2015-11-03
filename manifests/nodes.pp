@@ -14,6 +14,6 @@ node 'puppetmaster.local' {
 
 node 'media-server.local' {
   notify{"Configuring media-server": }
-  include base
+  include base, transmission, disk, samba
   #include base, avahi, transmission, ddclient, disk, samba
 }
