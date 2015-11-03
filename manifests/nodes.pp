@@ -1,5 +1,5 @@
 class base {
-  #include sudo, ssh, users
+  include sudo, ssh, users
 }
 
 node default {
