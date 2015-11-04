@@ -1,6 +1,6 @@
 class transmission::config {
   
-  $download_dir = transmission::config::download_dirdir
+  $download_dir = transmission::config::download_dir
   $incomplete_dir = transmission::config::incomplete_dir
   $rpc_url = transmission::config::rpc_url
   $username = transmission::config::username
