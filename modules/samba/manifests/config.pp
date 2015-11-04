@@ -1,4 +1,4 @@
-class transmission::config {
+class samba::config ($mounting_point = disk::config::mounting_point) {
   file { "/etc/samba/smb.conf" :
     ensure => present,
     owner => 'root',

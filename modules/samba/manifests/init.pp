@@ -1,3 +1,3 @@
 class samba {
-  include samba::install, ssh::config, ssh::service
+  include samba::install, samba::config, samba::service
 }
