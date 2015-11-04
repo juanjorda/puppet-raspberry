@@ -10,7 +10,7 @@ class disk::config {
 	  name        => '/media/SuperJuanter',
 	  ensure      => 'mounted',
 	  atboot      => true,
-	  device      => '/dev/sda2',
+	  device      => '/dev/sda1',
 	  fstype      => 'ext4',
 	  options     => 'defaults',
 	  require     => File['/media/SuperJuanter'],
