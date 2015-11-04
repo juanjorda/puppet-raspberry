@@ -4,7 +4,7 @@ class transmission::config {
     owner => 'root',
     group => 'root',
     mode => 0400,
-    source => "puppet:///modules/samba/etc/samba/smb.conf",
+    content => template('samba/etc/samba/smb.conf.erb'),
     require => Class["samba::install"]
     # notify => Class["transmission::service"],
   }

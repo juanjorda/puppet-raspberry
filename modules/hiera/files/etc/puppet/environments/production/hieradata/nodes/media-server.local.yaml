@@ -1,1 +1,2 @@
-mykey: one
+disk::config::mounting_point: '/media/SuperJuanter'
+disk::config::uuid: 'UUID=f650d056-89ae-4fd0-af34-22bb403fdef9'
