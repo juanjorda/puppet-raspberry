@@ -9,7 +9,7 @@ class ddclient::config {
     owner => 'root',
     group => 'root',
     mode => 0400,
-    content => template('ddclient/etc/ddclient.conf'),
+    content => template('ddclient/etc/ddclient.conf.erb'),
     require => Class["ddclient::install"]
     # notify => Class["transmission::service"],
   }
